@@ -1,0 +1,64 @@
+# PROJECT_NAME: "VAPT"
+TEST:
+  # 是否使用wandb,1表示使用,0表示不使用
+  WANDB: 0
+GPUS_id: 0
+FLAG: 1
+SEED: "3407"
+OUTPUT_DIR: 'experiment_result'
+NUM_GPUS: 1
+NUM_SHARDS: 1
+RUN_N_TIMES: 1
+MODEL:
+  INTRO: '044'
+  TRANSFER_TYPE: "prompt"
+  TYPE: 'CNN'
+#  TYPE: 'vit'
+  LINEAR:
+    MLP_SIZES: [ ]
+  PROMPT:
+    NUM_TOKENS: 4
+    DEEP: True
+    DROPOUT: 0.1
+    # DROPOUT: 0.5
+
+SOLVER:
+  SCHEDULER: "cosine"
+  PATIENCE: 300
+  LOSS: "softmax"
+  OPTIMIZER: "adamw"
+#  OPTIMIZER: "sgd"
+  MOMENTUM: 0.9
+
+  WEIGHT_DECAY: 1e-3
+  # WEIGHT_DECAY: 1e-4
+
+  LOG_EVERY_N: 100
+
+  # 5% 到 20%
+  # WARMUP_EPOCH: 50
+  WARMUP_EPOCH: 10
+  TOTAL_EPOCH: 100
+
+#  BASE_LR: 0.01
+  BASE_LR: 0.005
+#  BASE_LR: 0.005
+
+DATA:
+  NUMBER_CLASSES: 51
+  CROPSIZE: 224
+  NAME: 'hmdb51'
+  # 'ucf101' 'k400-tiny'
+  BATCH_SIZE: 20
+  ROOT_DIR: '/home/yqx/yqx_softlink/data/HMDB51/hmdb51'
+  OUTPUT_DIR: '/home/yqx/yqx_softlink/data/HMDB51/HMDB51_frames_224_new'
+PROMPT:
+  ATTRIBUTE: False
+  ATTRIBUTE_DIR: '/home/yqx/yqx_softlink/data/HMDB51/224_features_CLIP_new_cpu'
+  ATTRIBUTE_MODE: 'concat-fusion-equal'
+  ATTRIBUTE_DEPTH_NUM: 12
+
+TRICKS:
+  ADAPTER: True
+  FLIP: False
+  CROP: True

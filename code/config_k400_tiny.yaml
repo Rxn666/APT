@@ -1,0 +1,51 @@
+# PROJECT_NAME: "VAPT"
+TEST:
+  # 是否使用wandb,1表示使用,0表示不使用
+  WANDB : 0
+
+GPUS_id: 3
+
+NUM_GPUS: 1
+NUM_SHARDS: 1
+RUN_N_TIMES: 1
+MODEL:
+  TRANSFER_TYPE: "prompt"
+  TYPE: "vit"
+  LINEAR:
+    MLP_SIZES: [ ]
+  PROMPT:
+    NUM_TOKENS: 100
+    DEEP: True
+    DROPOUT: 0.1
+    # DROPOUT: 0.5
+
+SOLVER:
+  SCHEDULER: "cosine"
+  PATIENCE: 300
+  LOSS: "softmax"
+#  OPTIMIZER: "adamw"
+  OPTIMIZER: "sgd"
+  MOMENTUM: 0.9
+
+#  WEIGHT_DECAY: 1e-3
+  WEIGHT_DECAY: 1e-4
+
+  LOG_EVERY_N: 100
+
+  # 5% 到 20% 
+  # WARMUP_EPOCH: 50
+  WARMUP_EPOCH: 10
+  TOTAL_EPOCH: 100
+  
+#  BASE_LR: 0.005
+  # BASE_LR: 0.25
+  BASE_LR: 0.01
+
+DATA:
+  NUMBER_CLASSES: 400 # 类别
+  CROPSIZE : 224 # 裁剪图片大小
+  NUM_FRAMES : 8
+  NAME: 'k400-tiny'
+  # 'ucf101' 'k400-tiny'
+  BATCH_SIZE: 8
+
