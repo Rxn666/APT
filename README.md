@@ -1,7 +1,6 @@
 # AAT: Attribute-prompted Adapter Tuning for Efficient Video Action Recognition
 
-<p align="center"><img src="./figure/actions_storage.jpg" width="100%" alt="" /></p>
-<p align="center"><img src="./figure/distribution_UMAP.png" width="100%" alt="" /></p>
+<p align="center"><img src="./figure/intro.png" width="100%" alt="" /></p>
 
 ## Installation
 
@@ -13,33 +12,23 @@
 
 ```bash
 ${ROOT}/
-|-- dataset
-|   |-- CAD
-|   |   |-- data_train_CAD.npz
-|   |   |-- data_test_CAD.npz
-|   |-- MCPRL
-|   |   |-- data_train_MCPRL.npz
-|   |   |-- data_test_MCPRL.npz
+|-- data
+|   |-- UCF101
+|   |-- HMDB51
+|   |-- SthSthV2
+
 ```
 
 ## Download pretrained model
 
 The pretrained model can be found in [here](), please download it and put it in the ```'./checkpoint/pretrained'``` directory of the corresponding baseline methods.  
 
-## Test the model
-
-To test on a pretrained model on MCPRL:  
-
-```bash
-python main.py --test --previous_dir 'checkpoint/pretrained/'
-```
-
 ## Train the model
 
-To train on a model on MCPRL:
+To train on a model:
 
 ```bash
-python main.py --batch_size 1024
+python train.py --config-file config_mae.yaml
 ```
 
 
