@@ -1,6 +1,7 @@
 # AAT: Attribute-prompted Adapter Tuning for Efficient Video Action Recognition
 
 <p align="center"><img src="./figure/intro.png" width="100%" alt="" /></p>
+<p align="center"><img src="./figure/main.jpg" width="100%" alt="" /></p>
 
 ## Installation
 
@@ -31,7 +32,7 @@ To train on a model:
 python train.py --config-file config_mae.yaml
 ```
 
-
+<p align="center"><img src="./figure/umap.png" width="100%" alt="" /></p>
 
 ## Citation
 
