@@ -1,7 +1,8 @@
 # AAT: Attribute-prompted Adapter Tuning for Efficient Video Action Recognition
 
-<p align="center"><img src="./figure/intro.png" width="100%" alt="" /></p>
 <p align="center"><img src="./figure/main.jpg" width="100%" alt="" /></p>
+<p align="center"><img src="./figure/intro.png" width="100%" alt="" /></p>
+
 
 ## Installation
 
