@@ -37,7 +37,7 @@ python train.py --config-file config_mae.yaml
 
 ## Demo
 
-<p align="center"><img src="./figure/demo.png" width="100%" alt="" /></p>
+<p align="center"><img src="./figure/demo.jpg" width="100%" alt="" /></p>
 
 ## Citation
 
