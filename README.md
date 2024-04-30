@@ -35,6 +35,10 @@ python train.py --config-file config_mae.yaml
 
 <p align="center"><img src="./figure/umap.png" width="100%" alt="" /></p>
 
+## Demo
+
+<p align="center"><img src="./figure/demo.png" width="100%" alt="" /></p>
+
 ## Citation
 
 If you find our work useful in your research, please consider citing:
