@@ -1,4 +1,4 @@
-# AAT: Attribute Prompted Tuning for Efficient Video Action Recognition
+# APT: Attribute Prompted Tuning for Efficient Video Action Recognition
 
 <p align="center"><img src="./figure/main.jpg" width="100%" alt="" /></p>
 <p align="center"><img src="./figure/intro.png" width="70%" alt="" /></p>
